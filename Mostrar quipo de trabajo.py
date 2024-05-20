@@ -1,12 +1,10 @@
-#Variables generales para este codigo
+continuar=True
 codigosID=[]
 estaciones=[]
 nombres=[]
 apellidos=[]
 nacimientos=[]
 contraseñas=[]
-#Codigo
-continuar=True
 while continuar:
     print("Bienvenido")
     print("Escoja una de las siguientes opciones:")
@@ -40,4 +38,15 @@ while continuar:
         else:
            continuar=True
 
-    
+    elif eleccion==2:
+        if len(codigosID)== 0:
+            print("")
+            print("Debe de entar en el apartado de ingresar operarios para que se puedan mostrar los datos")
+            print("")
+            continuar=True
+        else:
+            print("")
+            print(f"{"Código ID":15} {"Estación":20} {"Nombre":20} {"Apellido":20} {"Fecha Nac.":15} {"Contraseña":15}")
+            for i in range(len(codigosID)):
+                print(f"{codigosID[i]:15} {estaciones[i]:20} {nombres[i]:20} {apellidos[i]:20} {nacimientos[i]:15} {contraseñas[i]:15}")
+            print("")
